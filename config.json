@@ -1,0 +1,32 @@
+{
+    "name": "Tor with bridges (fixed)",
+    "version": "5.0.3-patch1",
+    "slug": "tor_fixed",
+    "description": "Tor network addon with bridges to prevent censorship and ISP blocking. Patched to prevent torrc duplication crash loop.",
+    "arch": "amd64",
+    "url": "https://github.com/alexbelgium/hassio-addons",
+    "startup": "complete",
+    "boot": "auto",
+    "options": {},
+    "schema": "list|string?",
+    "ports": {
+        "9050/tcp": null,
+        "9051/tcp": null,
+        "9150/tcp": null,
+        "9151/tcp": null
+    },
+    "ports_description": {
+        "9050/tcp": "Tor SOCKS proxy",
+        "9051/tcp": "Tor control port",
+        "9150/tcp": "Tor SOCKS proxy (Firefox)",
+        "9151/tcp": "Tor control port (Firefox)"
+    },
+    "map": [
+        "ssl:rw"
+    ],
+    "hassio_api": true,
+    "homeassistant_api": true,
+    "host_network": true,
+    "host_pid": false,
+    "apparmor": "disabled"
+}
