@@ -9,6 +9,8 @@
     "url": "https://github.com/alexbelgium/hassio-addons",
     "startup": "application",
     "boot": "auto",
+    "legacy": true,
+    "options": {},
     "options": {},
     "schema": {
         "TOR_BRIDGE": "str?",
